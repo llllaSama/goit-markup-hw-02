@@ -7,10 +7,17 @@
   --maint-txt-cl: #212121;
   --scnd-txt-cl: #757575;
   --accent-txt-cl: #2196f3;
+  --wht-txt-a60-cl: rgba(255, 255, 255, 0.6);
 
   /* bg-colors */
   --dark-bg-cl: #2f303a;
   --mid-bg-cl: #f5f4fa;
+  --wht-bg-cl: #ffffff;
+  --wht-mid-bg-cl: #e5e5e5;
+  --focus-btn-cl: #188ce8;
+  --black-cl: #000000;
+  --absolute0bg-cl: #ececec;
+  --ee-bg-cl: #eeeeee;
 
   /* others */
 }
@@ -18,11 +25,27 @@
 body {
   font-family: var(--main-font);
   color: var(--maint-txt-cl);
+  background-color: var(--wht-bg-cl);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 /* reset styles */
 ul {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .link {
@@ -47,11 +70,10 @@ ul {
   color: var(--maint-txt-cl);
 }
 .logo-accent-ft {
-  color: #ffffff;
+  color: var(--wht-bg-cl);
 }
 .header-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: calc(16 / 12);
   letter-spacing: 0.02em;
 }
@@ -67,7 +89,6 @@ ul {
 
 .link-phone {
   font-weight: 500;
-  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--scnd-txt-cl);
@@ -82,7 +103,7 @@ h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
-  color: #ffffff;
+  color: var(--wht-bg-cl);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
@@ -95,14 +116,13 @@ h1 {
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   background-color: var(--accent-txt-cl);
-  color: #ffffff;
+  color: var(--wht-bg-cl);
   cursor: pointer;
-  border-width: 0;
+  border: 0;
 }
 .main-btn:hover,
 .main-btn:focus {
-  background-color: #188ce8;
-  color: #ffffff;
+  background-color: var(--focus-btn-cl);
 }
 .Hero {
   background-color: var(--dark-bg-cl);
@@ -114,16 +134,11 @@ h1 {
 */
 .work-info {
   font-weight: 700;
-  font-size: 14px;
   line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .work-info-txt {
-  font-weight: 400;
-  font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
   color: var(--scnd-txt-cl);
 }
 
@@ -133,7 +148,6 @@ h1 {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 /**
@@ -150,22 +164,17 @@ h1 {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 .tm-crd-name {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
-  letter-spacing: 0.03em;
 }
 .tm-crd-wrk {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
-letter-spacing: 0.03em;
-color: var(--scnd-txt-cl);
+  color: var(--scnd-txt-cl);
 }
-
 
 /**
   |============================
@@ -180,24 +189,17 @@ address {
 }
 
 .map {
-  font-weight: 400;
-  font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--wht-bg-cl);
 }
 .ft-contct {
   font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  
+  color: var(--wht-txt-a60-cl);
 }
 
 .tm-crd {
-  background-color: #ffffff;
+  background-color: var(--wht-bg-cl);
 }
 
 /**
@@ -210,16 +212,15 @@ address {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
-  letter-spacing: 0.03em;
-  background-color: #F5F4FA;
+  background-color: var(--mid-bg-cl);
   color: var(--maint-txt-cl);
   cursor: pointer;
-  border-width: 0;
+  border: 0;
 }
 .gps-btn:hover,
 .gps-btn:focus {
   background-color: var(--accent-txt-cl);
-  color: #ffffff;
+  color: var(--wht-bg-cl);
 }
 
 /* Portfolio section */
@@ -231,9 +232,7 @@ address {
   letter-spacing: 0.06em;
 }
 .prtf-card-projct {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(30 / 16);
-  letter-spacing: 0.03em;
   color: var(--scnd-txt-cl);
 }
